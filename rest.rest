@@ -1,0 +1,33 @@
+###
+POST https://stu-bill-api.herokuapp.com/api/v1/add
+Content-Type: application/json
+
+{
+    "mobileNumber": 1234567574,
+    "customerName": "yalgjhjf",
+    "dueAmount": 50000,
+    "dueDate": "2020-12-20"
+}
+
+###
+POST  https://stu-bill-api.herokuapp.com/api/v1/fetchBill
+Content-Type: application/json
+X-API-KEY:  123
+
+{
+    "mobileNumber": "1234567574"
+}
+
+###
+POST  https://stu-bill-api.herokuapp.com/api/v1/payment-update
+Content-Type: application/json
+X-API-KEY:  123
+
+{
+    "refID": "1uet4kcw1vmw9",
+    "transaction": {
+        "amountPaid": "50000",
+        "date": "2020-06-05",
+        "id": "OUAB012359"
+    }
+}
